@@ -1,0 +1,147 @@
+% Ahsan Habib - CV
+% One page, A4, ATS-friendly. Compiles with pdfLaTeX (works on Overleaf as-is).
+%
+% Editing tip: where a plain space sits next to bold text, a coloured separator
+% or a link, write \ssp instead of the space. It prints a normal space and also
+% puts a real space character into the PDF, so ATS parsers don't glue words.
+\documentclass[10pt]{article}
+
+\usepackage[a4paper,left=0.55in,right=0.55in,top=0.42in,bottom=0.38in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+% --- ATS: keep every character as real, extractable text ---
+\input{glyphtounicode}
+\pdfgentounicode=1                                      % map each glyph to Unicode
+\ifdefined\pdfinterwordspaceon \pdfinterwordspaceon \fi % real space characters between words
+\providecommand{\pdffakespace}{}                        % no-op on engines without it
+\DisableLigatures[f]{encoding = *, family = *}          % no fi/fl/ff ligature glyphs
+\newcommand{\ssp}{\pdffakespace\ }                      % "safe space" (see tip above)
+
+\definecolor{accent}{HTML}{7A1F3D}
+\definecolor{linkc}{HTML}{1F4E8C}
+\definecolor{muted}{HTML}{5A5A5A}
+
+\hypersetup{
+  hidelinks,
+  pdftitle={Ahsan Habib - CV},
+  pdfauthor={Ahsan Habib},
+  pdfsubject={Curriculum Vitae - Backend Developer / Software Engineer},
+  pdfkeywords={backend developer, software engineer, PHP, MySQL, Node.js, Express, MongoDB, RESTful API, Java, JavaScript, Python, SQL, Git, GitHub Actions, CI/CD, authentication, multithreading}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\raggedright
+
+% Section headings: uppercase, accent colour, thin rule underneath
+\titleformat{\section}{\color{accent}\bfseries\fontsize{11}{13}\selectfont}{}{0pt}{\MakeUppercase}[\vspace{1.5pt}{\color{accent}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{7pt}{3.5pt}
+
+\setlist[itemize]{leftmargin=13pt, labelsep=5pt, label={\textbullet\pdffakespace}, itemsep=1pt, parsep=0pt, topsep=1.5pt, partopsep=0pt}
+
+\newcommand{\sep}{\ssp\textcolor{muted}{|}\ssp}                         % " | "
+\newcommand{\link}[2]{\href{#1}{\textcolor{linkc}{\underline{#2}}}}     % visible link
+\newcommand{\entry}[3]{\textbf{#1}\sep #2\pdffakespace\hfill\textcolor{muted}{#3}\par} % title | details ... date
+\newcommand{\tech}[1]{{\leftskip=13pt\textit{\textcolor{muted}{Technologies: #1}}\par}}
+\newcommand{\skill}[2]{\item \textbf{#1:}\ssp #2}
+\newcommand{\gap}{\vspace{3.5pt}}
+
+\begin{document}
+
+%----------------------------------------------------------------- HEADER
+\begin{center}
+{\fontsize{21}{25}\selectfont\bfseries Ahsan Habib}\par\vspace{4pt}
+{\small Dhaka, Bangladesh\sep\href{tel:+8801917497409}{+880 1917-497409}\sep\href{mailto:ahsanauddry.ndc@gmail.com}{ahsanauddry.ndc@gmail.com}}\par\vspace{1pt}
+{\small\href{https://www.linkedin.com/in/ahsan-habib-0b3a62230}{linkedin.com/in/ahsan-habib-0b3a62230}\sep\href{https://github.com/ahsanauddry027}{github.com/ahsanauddry027}}
+\end{center}
+\vspace{-6pt}
+
+%----------------------------------------------------------------- SUMMARY
+\section{Summary}
+Backend developer and final-year CSE student (CGPA 3.76/4.00). Single-handedly built the production backend of \href{https://atmabiswas.org}{atmabiswas.org}\ssp in PHP and MySQL, with session-based authentication, CSRF/XSS protection and a GitHub Actions CI/CD pipeline. Also develops RESTful APIs with Node.js, Express and MongoDB, and multithreaded programs in C.
+
+%----------------------------------------------------------------- EXPERIENCE
+\section{Experience}
+\entry{Backend Developer}{BRACU Cultural Club, BRAC University, Dhaka}{Aug 2025 -- Mar 2026}
+\begin{itemize}
+  \item Developed the club website's entire backend in PHP; awarded a certificate signed by its faculty advisors
+\end{itemize}
+\gap
+\entry{Backend Developer Intern (Paid)}{\href{https://atmabiswas.org}{ATMABISWAS (NGO)}, Remote}{Jun 2024 -- Sep 2025}
+\begin{itemize}
+  \item Engineered the backend of \href{https://atmabiswas.org}{atmabiswas.org}\ssp as the sole backend developer, using PHP and MySQL (PDO), including an admin dashboard for publishing blogs, notices and job postings with auto-generated job codes
+  \item Secured the admin panel with session-based authentication, CSRF tokens and protected endpoints; validated uploads to block executable files and sanitized blog HTML with HTML Purifier to prevent XSS
+  \item Automated deployments with a GitHub Actions CI/CD pipeline that pushes to Hostinger over FTPS
+\end{itemize}
+
+%----------------------------------------------------------------- EDUCATION
+\section{Education}
+\entry{B.Sc. in Computer Science and Engineering}{BRAC University\sep CGPA\ssp\textbf{3.76/4.00}}{Expected Fall 2026}
+\begin{itemize}
+  \item CGPA\ssp\textbf{3.95}\ssp in 300--400 level CSE courses; Vice Chancellor's List: Summer 2024, Fall 2025, Spring 2026
+  \item Coursework: Data Structures, Algorithms, Databases, Operating Systems, Computer Networks, Software Engineering
+\end{itemize}
+\gap
+\entry{Higher Secondary Certificate (HSC)}{Notre Dame College, Dhaka\sep GPA\ssp\textbf{5.00/5.00}}{2021}
+
+%----------------------------------------------------------------- SKILLS
+\section{Technical Skills}
+\begin{itemize}
+  \skill{Languages}{Java, PHP, JavaScript, SQL, Python, C, C++, Kotlin, x86 Assembly}
+  \skill{Backend \& Databases}{Node.js, Express, RESTful APIs, MySQL (PDO), MongoDB (Mongoose), caching}
+  \skill{Security \& DevOps}{Authentication, CSRF/XSS prevention, input validation, Git, GitHub Actions (CI/CD)}
+  \skill{Frontend \& Mobile}{React, HTML, CSS, Tailwind CSS, Vite, Android (Kotlin, Jetpack Compose)}
+  \skill{Systems \& ML}{Multithreading (POSIX threads), Flex/Bison, Arduino, ESP32, PyTorch, LoRA, Whisper, Qwen2.5-VL}
+\end{itemize}
+
+%----------------------------------------------------------------- PROJECTS
+\section{Projects}
+\entry{\href{https://github.com/ahsanauddry027/BRACU_RoutineMaker}{BRACU Routine Builder}}{\link{https://github.com/ahsanauddry027/BRACU_RoutineMaker}{GitHub}}{Summer 2026}
+\begin{itemize}
+  \item Created a full-stack MERN web app for planning BRAC University class routines, with real-time conflict detection that blocks overlapping classes, paired-day scheduling and two-slot lab spanning
+  \item Designed a\ssp\textbf{19-endpoint}\ssp RESTful API with Express and Mongoose, including cascading deletes and auto-save
+  \item Integrated the university's USIS course feed with a\ssp\textbf{7-day}\ssp cache to auto-fill sections, faculty, rooms and exam dates
+\end{itemize}
+\tech{React, Node.js, Express, MongoDB, Mongoose}
+\gap
+\entry{\href{https://github.com/ahsanauddry027/CSE321_project_Process_manager}{Process Manager Simulator}}{Team of 3\sep\link{https://github.com/ahsanauddry027/CSE321_project_Process_manager}{GitHub}}{Spring 2026}
+\begin{itemize}
+  \item Owned the process-lifecycle module (fork, exit, wait, kill) and orphan reparenting on a mutex-protected process table, including a blocking wait free of missed-wakeup races
+\end{itemize}
+\tech{C, POSIX threads}
+\gap
+\entry{\href{https://github.com/ahsanauddry027/CSE420_CompilerDesign}{C-Subset Compiler}}{\link{https://github.com/ahsanauddry027/CSE420_CompilerDesign}{GitHub}}{Summer 2026}
+\begin{itemize}
+  \item Built a compiler front end for a C subset: Flex/Bison lexer and parser, scope-aware symbol table with hashed scopes, semantic analysis for type, scope and call errors, and a two-pass AST walk that emits three-address code
+\end{itemize}
+\tech{C++, Flex, Bison}
+\gap
+\entry{\href{https://github.com/ahsanauddry027/CSE461_project_TrackAlert}{TrackAlert Vision: Patrol Robot}}{\link{https://github.com/ahsanauddry027/CSE461_project_TrackAlert}{GitHub}}{Summer 2026}
+\begin{itemize}
+  \item \textbf{Led a team of 5}\ssp as lead architect: designed a two-controller system (Arduino Mega for real-time control, ESP32-S3-CAM for vision and Wi-Fi) and implemented the PD line follower and a Telegram photo-alert bot
+\end{itemize}
+\tech{C++, Arduino Mega, ESP32-S3-CAM}
+\gap
+\textbf{Other projects:}\ssp\link{https://github.com/ahsanauddry027/Android_Development_CSE489}{Bigger Number Game}\ssp(Android) \textperiodcentered\ssp\link{https://github.com/ahsanauddry027/CSE341_Project_Fall2025}{Voting Machine}\ssp(8086 Assembly) \textperiodcentered\ssp\link{https://github.com/ahsanauddry027/CSE350_project_bracu}{Arduino Tic-Tac-Toe}\ssp(C++)\par
+
+%----------------------------------------------------------------- RESEARCH
+\section{Research}
+\entry{InsightLens: Lecture-to-Notes Pipeline for Code-Mixed Lectures}{Undergraduate thesis, team of 3}{2026}
+\begin{itemize}
+  \item Fine-tuned Whisper with LoRA on Bengali-English lectures, cutting character error rate from\ssp\textbf{67.7\% to 15.8\%}
+  \item Developed the whiteboard-reading stage with Qwen2.5-VL, raising board-content recall from\ssp\textbf{31.2\% to 88.8\%}
+  \item Graded\ssp\textbf{A (95.5/100)}; co-authoring a manuscript on this work for an IEEE journal
+\end{itemize}
+\tech{Python, PyTorch, LoRA, Whisper, Qwen2.5-VL}
+
+\end{document}

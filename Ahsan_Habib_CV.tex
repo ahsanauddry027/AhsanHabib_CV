@@ -33,7 +33,7 @@
   pdftitle={Ahsan Habib - CV},
   pdfauthor={Ahsan Habib},
   pdfsubject={Curriculum Vitae - Backend Developer / Software Engineer},
-  pdfkeywords={backend developer, software engineer, PHP, MySQL, Node.js, Express, MongoDB, RESTful API, Java, JavaScript, Python, SQL, Git, GitHub Actions, CI/CD, authentication, multithreading}
+  pdfkeywords={backend developer, software engineer, Java, Spring Boot, Spring Data JPA, Hibernate, PostgreSQL, RESTful API, MVC, PHP, MySQL, Node.js, Express, MongoDB, JavaScript, Python, SQL, Git, GitHub Actions, CI/CD, Maven, Postman, authentication, multithreading}
 }
 
 \pagestyle{empty}
@@ -68,7 +68,7 @@
 
 %----------------------------------------------------------------- SUMMARY
 \section{Summary}
-Backend developer and final-year CSE student (CGPA 3.76/4.00). Single-handedly built the production backend of \href{https://atmabiswas.org}{atmabiswas.org}\ssp in PHP and MySQL, with session-based authentication, CSRF/XSS protection and a GitHub Actions CI/CD pipeline. Also develops RESTful APIs with Node.js, Express and MongoDB, and multithreaded programs in C.
+Backend developer and final-year CSE student (CGPA 3.76/4.00) building RESTful APIs with Java, Spring Boot and PostgreSQL, and with Node.js, Express and MongoDB. Single-handedly built the production backend of \href{https://atmabiswas.org}{atmabiswas.org}\ssp in PHP and MySQL, with session-based authentication, CSRF/XSS protection and a GitHub Actions CI/CD pipeline.
 
 %----------------------------------------------------------------- EXPERIENCE
 \section{Experience}
@@ -98,7 +98,8 @@ Backend developer and final-year CSE student (CGPA 3.76/4.00). Single-handedly b
 \section{Technical Skills}
 \begin{itemize}
   \skill{Languages}{Java, PHP, JavaScript, SQL, Python, C, C++, Kotlin, x86 Assembly}
-  \skill{Backend \& Databases}{Node.js, Express, RESTful APIs, MySQL (PDO), MongoDB (Mongoose), caching}
+  \skill{Backend}{Spring Boot, Spring Data JPA (Hibernate), Node.js, Express, RESTful APIs, caching, Maven, Postman}
+  \skill{Databases}{PostgreSQL, MySQL (PDO), MongoDB (Mongoose)}
   \skill{Security \& DevOps}{Authentication, CSRF/XSS prevention, input validation, Git, GitHub Actions (CI/CD)}
   \skill{Frontend \& Mobile}{React, HTML, CSS, Tailwind CSS, Vite, Android (Kotlin, Jetpack Compose)}
   \skill{Systems \& ML}{Multithreading (POSIX threads), Flex/Bison, Arduino, ESP32, PyTorch, LoRA, Whisper, Qwen2.5-VL}
@@ -106,9 +107,17 @@ Backend developer and final-year CSE student (CGPA 3.76/4.00). Single-handedly b
 
 %----------------------------------------------------------------- PROJECTS
 \section{Projects}
+\entry{\href{https://github.com/ahsanauddry027/SpringBoot_PostgreSQL_Api}{Kaaj Job Platform: Spring Boot REST API}}{Team of 3\sep\link{https://github.com/ahsanauddry027/SpringBoot_PostgreSQL_Api}{GitHub}}{Fall 2026}
+\begin{itemize}
+  \item Built\ssp\textbf{11}\ssp RESTful API endpoints for job posting and employer verification with Java, Spring Boot and Spring Data JPA on PostgreSQL, in a layered controller, service and repository (MVC) design
+  \item Modelled job posts as a state machine and enforced\ssp\textbf{10}\ssp business rules in the service layer (HTTP 400, 403, 409)
+  \item Developed admin verification of employers with validated document uploads; approval auto-publishes their drafts
+\end{itemize}
+\tech{Java, Spring Boot, Spring Data JPA, Hibernate, PostgreSQL, Maven, Postman}
+\gap
 \entry{\href{https://github.com/ahsanauddry027/BRACU_RoutineMaker}{BRACU Routine Builder}}{\link{https://github.com/ahsanauddry027/BRACU_RoutineMaker}{GitHub}}{Summer 2026}
 \begin{itemize}
-  \item Created a full-stack MERN web app for planning BRAC University class routines, with real-time conflict detection that blocks overlapping classes, paired-day scheduling and two-slot lab spanning
+  \item Created a full-stack MERN web app for planning BRAC University class routines, with real-time conflict detection
   \item Designed a\ssp\textbf{19-endpoint}\ssp RESTful API with Express and Mongoose, including cascading deletes and auto-save
   \item Integrated the university's USIS course feed with a\ssp\textbf{7-day}\ssp cache to auto-fill sections, faculty, rooms and exam dates
 \end{itemize}
@@ -116,23 +125,17 @@ Backend developer and final-year CSE student (CGPA 3.76/4.00). Single-handedly b
 \gap
 \entry{\href{https://github.com/ahsanauddry027/CSE321_project_Process_manager}{Process Manager Simulator}}{Team of 3\sep\link{https://github.com/ahsanauddry027/CSE321_project_Process_manager}{GitHub}}{Spring 2026}
 \begin{itemize}
-  \item Owned the process-lifecycle module (fork, exit, wait, kill) and orphan reparenting on a mutex-protected process table, including a blocking wait free of missed-wakeup races
+  \item Owned fork, exit, wait and kill on a mutex-protected process table, with race-free waits and orphan reparenting
 \end{itemize}
 \tech{C, POSIX threads}
 \gap
 \entry{\href{https://github.com/ahsanauddry027/CSE420_CompilerDesign}{C-Subset Compiler}}{\link{https://github.com/ahsanauddry027/CSE420_CompilerDesign}{GitHub}}{Summer 2026}
 \begin{itemize}
-  \item Built a compiler front end for a C subset: Flex/Bison lexer and parser, scope-aware symbol table with hashed scopes, semantic analysis for type, scope and call errors, and a two-pass AST walk that emits three-address code
+  \item Built a compiler front end: Flex/Bison parser, scoped symbol table, semantic checks and three-address code generation
 \end{itemize}
 \tech{C++, Flex, Bison}
 \gap
-\entry{\href{https://github.com/ahsanauddry027/CSE461_project_TrackAlert}{TrackAlert Vision: Patrol Robot}}{\link{https://github.com/ahsanauddry027/CSE461_project_TrackAlert}{GitHub}}{Summer 2026}
-\begin{itemize}
-  \item \textbf{Led a team of 5}\ssp as lead architect: designed a two-controller system (Arduino Mega for real-time control, ESP32-S3-CAM for vision and Wi-Fi) and implemented the PD line follower and a Telegram photo-alert bot
-\end{itemize}
-\tech{C++, Arduino Mega, ESP32-S3-CAM}
-\gap
-\textbf{Other projects:}\ssp\link{https://github.com/ahsanauddry027/Android_Development_CSE489}{Bigger Number Game}\ssp(Android) \textperiodcentered\ssp\link{https://github.com/ahsanauddry027/CSE341_Project_Fall2025}{Voting Machine}\ssp(8086 Assembly) \textperiodcentered\ssp\link{https://github.com/ahsanauddry027/CSE350_project_bracu}{Arduino Tic-Tac-Toe}\ssp(C++)\par
+\textbf{Other projects:}\ssp\link{https://github.com/ahsanauddry027/CSE461_project_TrackAlert}{TrackAlert Vision}\ssp(C++; led a team of 5) \textperiodcentered\ssp\link{https://github.com/ahsanauddry027/VhangtiChai_AndroidApp_CSE489}{VangtiChai}\ssp(Kotlin) \textperiodcentered\ssp\link{https://github.com/ahsanauddry027/CSE341_Project_Fall2025}{Voting Machine}\ssp(8086 Assembly)\par
 
 %----------------------------------------------------------------- RESEARCH
 \section{Research}

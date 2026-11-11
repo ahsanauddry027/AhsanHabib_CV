@@ -4,8 +4,8 @@
 
 **Ahsan Habib · Backend Developer / Software Engineer · reviewed November 2026**
 
-![ATS score](https://img.shields.io/badge/ATS_score-78%2F100-yellowgreen?style=for-the-badge)
-![Keyword match](https://img.shields.io/badge/keyword_match-58%25-orange?style=for-the-badge)
+![ATS score](https://img.shields.io/badge/ATS_score-82%2F100-green?style=for-the-badge)
+![Keyword match](https://img.shields.io/badge/keyword_match-71%25-yellowgreen?style=for-the-badge)
 ![Parse check](https://img.shields.io/badge/ATS_parse_check-passed-brightgreen?style=for-the-badge)
 ![Format](https://img.shields.io/badge/format-1--page_A4_PDF-blue?style=for-the-badge)
 
@@ -14,7 +14,7 @@
 </div>
 
 > [!IMPORTANT]
-> **Bottom line:** the formatting already scores full marks. The remaining 22 points are content: keywords from each job post, a backend framework, and numbers in the experience bullets.
+> **Bottom line:** the formatting already scores full marks, and version 3 adds the Kaaj project in **Spring Boot and PostgreSQL**, closing the two biggest keyword gaps (78 → 82). The remaining 18 points are content: numbers in the experience bullets, testing, Docker, cloud and Agile, and tailoring to each post.
 
 ## 📑 Contents
 
@@ -25,7 +25,7 @@
 | [🔑 Keyword Analysis](#-keyword-analysis) | 19 skills from six Dhaka backend posts, and which are on the CV |
 | [🚀 How to Improve Your ATS Score](#-how-to-improve-your-ats-score) | Quick wins, bigger wins, tailoring, formatting rules |
 | [📈 Score Projection](#-score-projection) | How the score rises as each gap closes |
-| [🔧 What Changed in the CV](#-what-changed-in-the-cv) | Version 1 and version 2 changes |
+| [🔧 What Changed in the CV](#-what-changed-in-the-cv) | Changes in versions 1, 2 and 3 |
 | [🆚 Lessons from the Two Sample CVs](#-lessons-from-the-two-sample-cvs) | What to copy and what to avoid |
 | [📝 Editing the CV](#-editing-the-cv) | Update the CV in Overleaf without breaking the ATS checks |
 | [📚 Sources](#-sources) | The job posts behind the keyword analysis |
@@ -38,10 +38,10 @@
 |---|:---:|:---:|:---|---|
 | Parsing & format | 25% | **10/10** | `██████████` | One column, real text with real spaces, standard fonts and headings, no tables or icons |
 | Sections & contact | 10% | **10/10** | `██████████` | Name, phone, email, LinkedIn, GitHub and both job date ranges parse |
-| Keyword match | 35% | **6/10** | `██████░░░░` | Has 11 of the 19 skills six Dhaka backend posts ask for (58% weighted) |
+| Keyword match | 35% | **7/10** | `███████░░░` | Has 13 of the 19 skills six Dhaka backend posts ask for (71% weighted), now including Spring Boot and PostgreSQL |
 | Measurable results | 15% | **6/10** | `██████░░░░` | Research and projects have numbers; the two jobs have none |
 | Readability & length | 15% | **9/10** | `█████████░` | One page, consistent dates and tense; dense but easy to skim |
-| **Overall** | **100%** | **78/100** | `████████░░` | Formatting is maxed out; keywords and numbers hold it back |
+| **Overall** | **100%** | **82/100** | `████████░░` | Formatting is maxed out; numbers in the jobs and testing/DevOps keywords hold it back |
 
 <details>
 <summary><b>🧮 How the score is calculated</b></summary>
@@ -53,10 +53,10 @@ Each area is scored out of 10, then weighted. Keywords carry the most weight bec
 ```text
   25 × 1.00   parsing & format
 + 10 × 1.00   sections & contact
-+ 35 × 0.58   keyword match (42 of 72 weighted points)
++ 35 × 0.71   keyword match (51 of 72 weighted points)
 + 15 × 0.60   measurable results
 + 15 × 0.90   readability & length
-= 77.9  →  78 / 100
+= 82.3  →  82 / 100      (version 2: 42 of 72 points, 77.9 → 78)
 ```
 
 </details>
@@ -66,14 +66,14 @@ Each area is scored out of 10, then weighted. Keywords carry the most weight bec
 
 <br>
 
-The CV was read back the way a parser reads it, character by character:
+The CV was read back the way a parser reads it, character by character (re-checked for version 3):
 
 | Check | Result |
 |---|---|
-| Pages | 1 (A4) |
-| Links intact | 12 |
+| Pages | 1 (A4), checked on every build by the GitHub Action |
+| Links intact | 18 |
 | Ligature or garbled glyphs | 0 |
-| Glued words or double spaces | 0 |
+| Glued words | 0 (the only wide gaps separate titles from their right-aligned dates) |
 | Sections detected | Summary, Experience, Education, Technical Skills, Projects, Research |
 | Contact details detected | Email, phone, LinkedIn, GitHub |
 | Job date ranges parsed | `Aug 2025 – Mar 2026`, `Jun 2024 – Sep 2025` |
@@ -82,7 +82,7 @@ The CV was read back the way a parser reads it, character by character:
 </details>
 
 > [!NOTE]
-> ATS scores aren't standardized: every tool, and every job post, weighs keywords differently. Treat 78 as a benchmark against the six posts in [Sources](#-sources), not a universal number.
+> ATS scores aren't standardized: every tool, and every job post, weighs keywords differently. Treat 82 as a benchmark against the six posts in [Sources](#-sources), not a universal number.
 
 ---
 
@@ -91,8 +91,8 @@ The CV was read back the way a parser reads it, character by character:
 | Checklist item | Status | Note |
 |---|:---:|---|
 | Job description analysis | 🟡&nbsp;Partly | Matched to six Dhaka backend posts in general, not yet to a specific job |
-| Relevant keywords | 🟡&nbsp;Partly | 11 of 19 recurring skills (58%) |
-| Target role alignment | 🟢&nbsp;Mostly | Summary, titles and skills point to backend; no project shows Java or a backend framework yet |
+| Relevant keywords | 🟢&nbsp;Mostly | 13 of 19 recurring skills (71%) |
+| Target role alignment | 🟢&nbsp;Yes | Summary, titles, skills and the first project (Kaaj: Java, Spring Boot, PostgreSQL) all point to backend |
 | Professional summary | 🟢&nbsp;Yes | Three specific lines; could also state how long you've done backend work |
 | Skills optimization | 🟢&nbsp;Mostly | Grouped, backend first; Arduino, ESP32 and x86 Assembly add little for backend roles |
 | Experience presentation | 🟡&nbsp;Partly | Clear titles, dates and verbs, but no numbers |
@@ -103,7 +103,7 @@ The CV was read back the way a parser reads it, character by character:
 - [x] Is the important information clearly structured?
 - [x] Is it readable by both ATS and recruiters?
 - [ ] Is it relevant to my target job? → yes for backend roles in general; tailor it to each post
-- [ ] Does it contain relevant keywords? → 58% today; see the gaps below
+- [ ] Does it contain relevant keywords? → 71% today; see the gaps below
 
 ---
 
@@ -114,8 +114,8 @@ Skills that six Dhaka backend job posts ask for, weighted by how many of the pos
 ```mermaid
 pie
     title Keyword coverage, weighted by how often each skill is asked
-    "On the CV" : 42
-    "Missing" : 30
+    "On the CV" : 51
+    "Missing" : 21
 ```
 
 | Skill | Asked in | On CV |
@@ -124,8 +124,8 @@ pie
 | REST APIs | 6 / 6 | ✅ |
 | SQL / relational databases | 6 / 6 | ✅ |
 | CI/CD | 5 / 6 | ✅ |
-| **Backend framework** (Spring Boot, Laravel, NestJS, Django) | 5 / 6 | ❌ |
-| PostgreSQL | 4 / 6 | ❌ |
+| **Backend framework** (Spring Boot, Laravel, NestJS, Django) | 5 / 6 | ✅ Spring Boot (v3) |
+| PostgreSQL | 4 / 6 | ✅ (v3) |
 | Unit testing / TDD | 4 / 6 | ❌ |
 | Microservices | 4 / 6 | ❌ |
 | Agile / Scrum | 4 / 6 | ❌ |
@@ -202,7 +202,7 @@ Then put the number in the bullet, for example:
 
 *Before the Jan–Apr 2027 job hunt.*
 
-- [ ] **Build the Kaaj features in Spring Boot with PostgreSQL.** One project fills the two biggest gaps, a backend framework (5 of 6 posts) and PostgreSQL (4 of 6), and backs up the "Java" on the CV.
+- [x] **Build the Kaaj features in Spring Boot with PostgreSQL.** Done in version 3: job posting and employer verification, 11 REST endpoints ([repo](https://github.com/ahsanauddry027/SpringBoot_PostgreSQL_Api)). It fills the two biggest gaps, a backend framework (5 of 6 posts) and PostgreSQL (4 of 6), and backs up the "Java" on the CV.
 - [ ] **Add JUnit tests and a Dockerfile, then deploy on a free cloud tier.** That covers testing (4/6), Docker (2/6) and cloud (4/6), each with proof.
 - [ ] **Run the Kaaj team in short sprints on a GitHub Projects board.** Then "Agile/Scrum" (4/6) is a true claim.
 - [ ] **Add a LeetCode or Codeforces profile link** once you've built a record there. It gives recruiters something they can check.
@@ -211,11 +211,11 @@ Then put the number in the bullet, for example:
 flowchart LR
     subgraph S1["1 · Now"]
         direction TB
-        A["CV today · 78/100"] --> B["Quick wins: tailoring, numbers, OOP, repo READMEs"]
+        A["CV v3 · 82/100"] --> B["Quick wins: tailoring, numbers, OOP, repo READMEs"]
     end
     subgraph S2["2 · Build"]
         direction TB
-        C["Kaaj backend in Spring Boot + PostgreSQL"] --> D["JUnit tests + Dockerfile"]
+        C["✅ Kaaj backend in Spring Boot + PostgreSQL"] --> D["JUnit tests + Dockerfile"]
         D --> E["Deploy on a free cloud tier"]
         E --> F["Sprints on a GitHub Projects board"]
     end
@@ -286,22 +286,21 @@ Same rubric, adding each improvement in order. **Only add what's true.**
 
 | Step | Change | Keyword match | Score |
 |:---:|---|:---:|:---:|
-| 0 | CV today | 42/72 · 58% | **78** |
-| 1 | + OOP, if you can defend it | 45/72 · 62% | 79 |
-| 2 | + real numbers in both jobs | 45/72 · 62% | 82 |
-| 3 | + Spring Boot (Kaaj backend) | 50/72 · 69% | 85 |
-| 4 | + PostgreSQL | 54/72 · 75% | 87 |
-| 5 | + unit tests (JUnit) | 58/72 · 81% | 89 |
-| 6 | + Docker | 60/72 · 83% | 90 |
-| 7 | + cloud deployment | 64/72 · 89% | 92 |
-| 8 | + Agile/Scrum (sprints) | 68/72 · 94% | **94** |
+| 0 | CV version 2 | 42/72 · 58% | 78 |
+| ✅ 1 | + Spring Boot and PostgreSQL (Kaaj backend) · **CV version 3, today** | 51/72 · 71% | **82** |
+| 2 | + OOP, if you can defend it | 54/72 · 75% | 84 |
+| 3 | + real numbers in both jobs | 54/72 · 75% | 87 |
+| 4 | + unit tests (JUnit) | 58/72 · 81% | 89 |
+| 5 | + Docker | 60/72 · 83% | 90 |
+| 6 | + cloud deployment | 64/72 · 89% | 92 |
+| 7 | + Agile/Scrum (sprints) | 68/72 · 94% | **94** |
 
 <details>
 <summary><b>Assumptions behind the projection</b></summary>
 
 <br>
 
-- Step 2 assumes real numbers raise *Measurable results* from 6/10 to 8/10.
+- Step 3 assumes real numbers raise *Measurable results* from 6/10 to 8/10.
 - Each keyword step assumes the skill appears in Skills **and** in a bullet that proves it.
 - Microservices (the last 4 of 72 points) is left out on purpose; see the tip in [Keyword Analysis](#-keyword-analysis).
 
@@ -337,6 +336,20 @@ Same rubric, adding each improvement in order. **Only add what's true.**
 - Varied action verbs; five bullets used to start with "Built"
 - Skills now name what the work already shows: HTML/CSS, caching, input validation, multithreading
 - Nothing invented: every claim is backed by the original CV
+
+</details>
+
+<details>
+<summary><b>Version 3: Spring Boot and PostgreSQL (Kaaj)</b></summary>
+
+<br>
+
+- New first project, **Kaaj Job Platform: Spring Boot REST API** (CSE471, team of 3): 11 RESTful endpoints for job posting and employer verification with Java, Spring Boot and Spring Data JPA on PostgreSQL in a layered MVC design; a job-status state machine with 10 service-layer rules; admin verification with validated uploads. Every claim comes from the [repo's README](https://github.com/ahsanauddry027/SpringBoot_PostgreSQL_Api)
+- Summary now opens with "building RESTful APIs with Java, Spring Boot and PostgreSQL"
+- Skills split into **Backend** (Spring Boot, Spring Data JPA (Hibernate), Node.js, Express, RESTful APIs, caching, Maven, Postman) and **Databases** (PostgreSQL, MySQL, MongoDB); PDF keywords updated to match
+- Kept to one page: TrackAlert moved to *Other projects* (keeping "led a team of 5"), and the Routine Builder, Process Manager and compiler bullets were tightened
+- *Other projects* links VangtiChai instead of Bigger Number Game, whose README has an unprofessional pop-up message
+- A GitHub Action now compiles the LaTeX with pdfLaTeX, refuses a PDF longer than one page, and commits `Ahsan_Habib_CV.pdf`
 
 </details>
 
@@ -381,6 +394,8 @@ Two "selected" CVs shared on social media were scored before rebuilding this one
 ## 📝 Editing the CV
 
 This repo holds the CV as a PDF ([`Ahsan_Habib_CV.pdf`](Ahsan_Habib_CV.pdf)) and its LaTeX source ([`Ahsan_Habib_CV.tex`](Ahsan_Habib_CV.tex)).
+
+**Easiest way:** edit `Ahsan_Habib_CV.tex` on GitHub (or locally) and push. The [Build CV PDF](.github/workflows/build-cv.yml) action compiles it with pdfLaTeX, checks it is still one page, and commits the new `Ahsan_Habib_CV.pdf` for you. If the CV runs onto a second page, the run fails and its warning shows which text spilled over.
 
 <details>
 <summary><b>✏️ Update it in Overleaf</b></summary>

@@ -1,0 +1,57 @@
+# Compiles Ahsan_Habib_CV.tex with pdfLaTeX (the same engine Overleaf uses), checks the PDF is
+# exactly one page, and commits the built Ahsan_Habib_CV.pdf back to the branch.
+# On main, a PDF that runs past one page is never committed; the run fails instead.
+name: Build CV PDF
+
+on:
+  push:
+    paths:
+      - Ahsan_Habib_CV.tex
+      - .github/workflows/build-cv.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-cv-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Compile with pdfLaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Ahsan_Habib_CV.tex
+
+      - name: Count pages
+        id: pages
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils > /dev/null
+          pages=$(pdfinfo Ahsan_Habib_CV.pdf | awk '/^Pages:/ {print $2}')
+          echo "pages=$pages" >> "$GITHUB_OUTPUT"
+          echo "::notice::Pages: $pages"
+          if [ "$pages" != "1" ]; then
+            overflow=$(pdftotext -f 2 -l 2 Ahsan_Habib_CV.pdf - | sed '/^\s*$/d' | head -n 15 | tr '\n' '|')
+            echo "::warning::Text on page 2: $overflow"
+          fi
+
+      - name: Commit the built PDF
+        if: steps.pages.outputs.pages == '1' || github.ref != 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Ahsan_Habib_CV.pdf
+          git diff --cached --quiet && exit 0
+          git commit -m "Build Ahsan_Habib_CV.pdf from LaTeX"
+          git push
+
+      - name: Fail if the CV is not one page
+        if: steps.pages.outputs.pages != '1'
+        run: |
+          echo "::error::The CV is ${{ steps.pages.outputs.pages }} pages; it must be 1. Shorten a bullet."
+          exit 1

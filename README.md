@@ -344,7 +344,7 @@ Same rubric, adding each improvement in order. **Only add what's true.**
 
 <br>
 
-- New first project, **Kaaj Job Platform: Spring Boot REST API** (CSE471, team of 3): 11 RESTful endpoints for job posting and employer verification with Java, Spring Boot and Spring Data JPA on PostgreSQL in a layered MVC design; a job-status state machine with 10 service-layer rules; admin verification with validated uploads. Every claim comes from the [repo's README](https://github.com/ahsanauddry027/SpringBoot_PostgreSQL_Api)
+- New first project, **Kaaj The Job** (Spring Boot REST API, CSE471 individual assignment), opening with its end goal: a Bangla-first job platform that matches workers to verified jobs nearby and blocks scam posts. 11 RESTful endpoints for job posting and employer verification with Java, Spring Boot and Spring Data JPA on PostgreSQL in a layered MVC design; a job-status state machine with 10 service-layer rules; admin verification with validated uploads. Every claim comes from the [repo's README](https://github.com/ahsanauddry027/SpringBoot_PostgreSQL_Api)
 - Summary now opens with "building RESTful APIs with Java, Spring Boot and PostgreSQL"
 - Skills split into **Backend** (Spring Boot, Spring Data JPA (Hibernate), Node.js, Express, RESTful APIs, caching, Maven, Postman) and **Databases** (PostgreSQL, MySQL, MongoDB); PDF keywords updated to match
 - Kept to one page: TrackAlert moved to *Other projects* (keeping "led a team of 5"), and the Routine Builder, Process Manager and compiler bullets were tightened
